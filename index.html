@@ -1,0 +1,147 @@
+<!--
+    Developed BY 7142 Ankit
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PI-Home</title>
+
+        <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="shortcut icon" href="assets/fav.ico">
+
+        <script src="assets/jquery-3.1.1.min.js"></script>
+
+        <!--Jquery Calendar-->
+        <link rel="stylesheet" type="text/css" href="assets/jquery-ui.css">
+        <script src="assets/jquery-ui.min.js"></script>
+
+        <!--Confirm Jquery-->
+        <link rel="stylesheet" type="text/css" href="assets/jquery-confirm/jquery-confirm.css">
+        <script src="assets/jquery-confirm/jquery-confirm.js"></script>
+
+        <script src="js/main.js"></script>
+
+        <style>
+            body{
+                overflow: hidden;
+            }
+        </style>
+
+    </head>
+
+    <body>   
+
+        <div id="wrapper">
+            <div id="sidebar-wrapper" class="navbar navbar-default">
+                <div class="navbar-header <pi-header></pi-header>">
+                    <a class="navbar-brand" href="#">PI
+                        <!--<sub class="beta">beta</sub>-->
+                    </a>
+                </div>
+
+                <ul class="nav navbar-nav" id="navbar-list">
+                    <li class="active active-link"><a href="#">Borrow Details</a></li>
+                    <li><a href="items.html">Items</a></li>
+                </ul>
+            </div>
+
+            <div id="content-wrapper">
+
+                <!-- Search Field -->
+                <form class="form-inline" role="form" id="search-form">
+                    <div class="form-group search-controls">
+                        <input type="text" name="Search By Name" placeholder="Search by Name" class="form-control" id="search-input">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="search-button">Search</button>
+                </form>    
+
+                
+                <table class="table table-hover" id="student-table">
+                    <thead class="thead-inverse">
+                        <tr id="fixed-header">
+                            <th>#</th>
+                            <th>Student Name</th>
+                            <th>Item Borrowed</th>
+                            <th>Quantity</th>
+                            <th>Borrowed Date</th>
+                            <th></th> <!--This column contains the delete function-->
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td colspan="6">
+                                <div class="scrollable">
+                                    <table class="table table-hover table-content student-table">
+                                        <thead class="thead-inverse">
+                                            <tr id="fixed-header">
+                                                <th>#</th>
+                                                <th>Student Name</th>
+                                                <th>Item Borrowed</th>
+                                                <th>Quantity</th>
+                                                <th>Borrowed Date</th>
+                                                <th></th> <!--This column contains the delete function-->
+                                            </tr>
+                                        </thead>
+
+                                        <tbody id="main-content">
+                                            <!--<tr>
+                                                <td>1</td>
+                                                <td>7142 Ankit</td>
+                                                <td>PI</td>
+                                                <td>2</td>
+                                                <td>17th June 2017</td>
+                                            </tr>-->
+                                            
+                                        </tbody>
+
+                                        
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <!-- Bottom Control Section to Add Names -->
+
+                <div class="footer">
+                    <footer class="navbar-fixed-bottom" id="borrow-control" >
+                        <form class="form-inline" role="form" id="student-form">
+                            <div class="form-group bottom-input">
+                                <input type="text" placeholder="Name" class="form-control" id="student-name">
+                            </div>
+
+                            <div class="form-group bottom-input">
+                                <div class="form-group">
+                                    <select class="form-control" id="selected-item">
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group bottom-input">
+                                <input type="number" placeholder="Quantity Taken" class="form-control" id="quantity-taken">
+                            </div>
+
+                            <div class="form-group bottom-input">
+                                <input placeholder="Borrowed Date" class="form-control" id="date-taken">
+                            </div>
+
+                            <button class="btn btn-success" type="submit">Add</button>
+                        </form>
+                    </footer>
+                </div>
+            </div>
+        </div>     
+            
+        <script>
+            getStudentInfo();
+            loadSelectValues();
+        </script>
+        
+
+    </body>
+</html>
