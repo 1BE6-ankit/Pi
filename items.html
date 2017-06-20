@@ -22,6 +22,9 @@
             body{
                 overflow: hidden;
             }
+            form{
+                margin-bottom: 0px !important;
+            }
         </style>
 
     </head>
@@ -30,7 +33,7 @@
         <div id="wrapper">
             <div id="sidebar-wrapper" class="navbar navbar-default">
                 <div class="navbar-header <pi-header></pi-header>">
-                    <a class="navbar-brand" href="#">PI<sub class="beta">beta</sub>
+                    <a class="navbar-brand" href="index.html">PI<sub class="beta">beta</sub>
                     </a>
                 </div>
 
@@ -40,7 +43,16 @@
                 </ul>
             </div>
 
-            <div id="content-wrapper">                
+            <div id="content-wrapper">         
+
+                <!--Student Search Field -->
+                <form class="form-inline" role="form" id="item-search-form">
+                    <div class="form-group search-controls">
+                        <input type="text" name="Search Item" placeholder="Search Item" class="form-control" id="item-search-input">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="item-search-button">Search</button>
+                </form>    
+
                 <table class="table table-hover">
                     <thead class="thead-inverse">
                         <tr>

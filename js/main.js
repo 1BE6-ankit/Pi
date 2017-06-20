@@ -47,11 +47,18 @@ $(document).ready(function(){
         }
     });
 
-    // for search query
-    $("#search-form").submit(function(e){
+    // for student search query
+    $("#student-search-form").submit(function(e){
         e.preventDefault();
-        var searchQuery = $("#search-input").val();
+        var searchQuery = $("#student-search-input").val();
         getStudentInfo(searchQuery);        
+    });
+
+    // for item search query
+    $("#item-search-form").submit(function(e){
+        e.preventDefault();
+        var searchQuery = $("#item-search-input").val();
+        getItemInfo(searchQuery);
     });
 
     $("#date-taken").datepicker({ dateFormat: 'DD, d MM , yy' });
@@ -137,16 +144,19 @@ function sendStudentInfo(){
         }
     });
     
-
     return true;
     
 }
 
-function getItemInfo(){
+function getItemInfo(searchString){
+    searchString = searchString || "";
     $.ajax({
         url : "php/get_items.php",
         type: "post",
         async  : true,
+        data: {
+            "search_string": searchString
+        },
         success: function(data){
             console.log("Data Successfully Sent");
             updateItemTable(JSON.parse(data));
@@ -211,8 +221,6 @@ function updateStudentTable(jsonData){
     }
     $("#main-content").html(content);
 }
-
-
 
 function getRowId(idOfButton){
     /*
