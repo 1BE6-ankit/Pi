@@ -251,11 +251,13 @@ function sendDeleteOperationToDatabase(idToDelete, requiredTable){
 }
 
 function loadSelectValues(){
-
     $.ajax({
         url : "php/get_items.php",
         type: "post",
         async  : true,
+        data: {
+            "search_string": ""
+        },
         success: function(data){
             console.log("Item list data received");
 
