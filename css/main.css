@@ -1,108 +1,109 @@
-
-.beta{
+.beta {
     font-size: 0.4em;
     color: #c0c0c0;
 }
 
-#sidebar-wrapper{
-    width:150px;
-    height:100%;
+#sidebar-wrapper {
+    width: 150px;
+    height: 100%;
     position: fixed;
     padding: 0;
     margin: 0;
     z-index: 1000;
 }
 
-.navbar-brand{
+.navbar-brand {
     font-size: 1.8em;
 }
 
-#navbar-list{
+#navbar-list {
     display: block;
-    width: 150px;
+    width: 100%;
     padding: 0;
     margin: 0;
     position: relative;
 }
 
-#navbar-list li{
-    float:none;
-    display:block;
+#navbar-list li {
+    float: none;
+    display: block;
 }
 
-#navbar-list a{
+#navbar-list a {
     color: #999;
 }
-#navbar-list a:hover{
-    color:#fff;
+
+#navbar-list a:hover {
+    color: #fff;
 }
 
-.active-link a{
-    color:white !important;
+.active-link a {
+    color: white !important;
 }
 
-#content-wrapper{
+#content-wrapper {
     position: relative;
-    width:85%;
+    width: 85%;
     margin-left: 180px;
-    padding:10px;
+    padding: 10px;
 }
 
-#borrow-control{
+#borrow-control {
     margin-left: 150px;
     background-color: rgba(0, 0, 0, 0.75);
 }
 
-.bottom-input{
+.bottom-input {
     margin-left: 30px;
-    padding:5px;
+    padding: 5px;
 }
 
-#delete-record{
+#delete-record {
     margin-left: 10px;
     transition: 1s linear;
 }
 
-.scrollable{
-    position:relative;
+.scrollable {
+    position: relative;
     overflow-y: scroll;
-    position:relative;
+    position: relative;
     background-color: none;
     margin-bottom: 100px;
 }
 
-.table-content{
-    position:absolute;
+.table-content {
+    position: absolute;
     /*cursor: pointer;   */
     margin-top: -30px;
 }
-.table-content thead{
+
+.table-content thead {
     visibility: collapse;
 }
 
-.table-content tr:nth-child(odd){
+.table-content tr:nth-child(odd) {
     background-color: rgb(230, 230, 250);
 }
 
-.data-row:hover{
+.data-row:hover {
     cursor: pointer;
     color: green;
 }
 
-.data-row:hover .delete-button{
+.data-row:hover .delete-button {
     visibility: visible;
 }
 
-.delete-button{
+.delete-button {
     visibility: hidden;
-    color: rgb(150,0,0);
+    color: rgb(150, 0, 0);
     position: absolute;
     font-size: 20px;
-    margin-top:-4px;
+    margin-top: -4px;
     /*font-weight: bolder;*/
 }
 
-.delete-button:hover{
+.delete-button:hover {
     color: rgb(255, 0, 0);
     border-radius: 4px;
     border-color: black;
